@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage Padding="0" xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="Reunion2020.View.EventsPage"
+             >
+  
+  <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Tilføj"
+                     Icon="add.png"
+                     /> 
+    </ContentPage.ToolbarItems>
+    <ScrollView>
+    <StackLayout> 
+        <SearchBar Placeholder="Søg arrangement"
+                   x:Name="eventsSearchBar"
+                   HeightRequest="40"
+                   ></SearchBar>
+        
+        <ListView x:Name="eventsListView" HasUnevenRows="true"
+                  Margin="0,0,0,0"
+                  VerticalOptions="FillAndExpand"
+                  HorizontalOptions="FillAndExpand"
+                  ItemsSource="{Binding Events}"
+                  RefreshCommand="{Binding LoadEventsCommand}"
+                                   >
+
+        <ListView.ItemTemplate>
+        <DataTemplate>
+         <ViewCell>
+          <ViewCell.View>
+                <StackLayout Spacing="5">
+            <Frame OutlineColor="Silver"
+                   VerticalOptions="StartAndExpand"
+                   HorizontalOptions="FillAndExpand"
+                   Padding="10"
+                   HasShadow="true"
+                   BackgroundColor="White">
+           <StackLayout VerticalOptions="CenterAndExpand"
+  
+                        HorizontalOptions="FillAndExpand"> 
+                    <Image Aspect="AspectFit"
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="FillAndExpand"
+                          
+                           Source="{Binding Image.Source}"></Image>
+                                            
+                     <Label Text="{Binding Name}"
+                            FontAttributes="Bold"
+                            TextColor="Maroon"
+                            FontSize="22"
+                            
+                            
+                            ></Label>
+                      <Label Text="{Binding EventCatagory}"
+                             TextColor="Navy"
+                             FontSize="16">
+                             
+                             </Label>
+                                               
+                        <Label Text="{Binding Location.City}"
+                             TextColor="Navy"
+                             FontSize="16"></Label>
+                                        <Label Text="{Binding Timings[0]}"
+                                               TextColor="Navy"
+                                               FontSize="16"></Label>
+                                        <Label  Text="{Binding TargetGroup}"
+                                                FontSize="16"
+                                                TextColor="Navy"></Label>
+                                
+                                
+           </StackLayout>
+             </Frame>
+             </StackLayout>
+          </ViewCell.View>                               
+        </ViewCell>
+        </DataTemplate>
+    </ListView.ItemTemplate>
+  </ListView>
+    </StackLayout>
+        </ScrollView>
+</ContentPage>

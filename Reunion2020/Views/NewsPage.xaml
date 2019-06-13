@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage Padding="0" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Reunion2020.View.NewsPage">
+<ContentPage.Content>
+        <StackLayout>
+            
+            <SearchBar Placeholder="Søg Nyheder"
+                   x:Name="newsSearchBar"
+                   HeightRequest="40"
+                   ></SearchBar>
+            
+            <ListView x:Name="newsListView" HasUnevenRows="true"
+                  Margin="0,0,0,0"
+                  VerticalOptions="FillAndExpand"
+                  HorizontalOptions="FillAndExpand"
+                  ItemsSource="{Binding News}" 
+                      RefreshCommand="{Binding LoadNewsCommand}">
+
+        <ListView.ItemTemplate>
+        <DataTemplate>
+         <ViewCell>
+          <ViewCell.View>
+                            <StackLayout Spacing="5">
+            <Frame OutlineColor="Silver"
+                   VerticalOptions="StartAndExpand"
+                   HorizontalOptions="FillAndExpand"
+                   Padding="20">
+           <StackLayout VerticalOptions="FillAndExpand"
+                        
+                        HorizontalOptions="FillAndExpand"> 
+                    <Image Aspect="AspectFit"
+                           HorizontalOptions="FillAndExpand"
+                           Source="{Binding Image.Source}"></Image>
+                     <Label Text="{Binding Headline}"
+                            FontAttributes="Bold"
+                            TextColor="Maroon"
+                            FontSize="22"
+                            ></Label>
+                      <Label Text="{Binding PublishDateTime}"
+                             TextColor="Navy"
+                             FontSize="16"></Label>
+                        <Label Text="{Binding Author}"
+                             TextColor="Navy"
+                             FontSize="16"></Label>
+      
+           </StackLayout>
+             </Frame>
+             </StackLayout>
+          </ViewCell.View>                               
+        </ViewCell>
+        </DataTemplate>
+    </ListView.ItemTemplate>
+  </ListView>
+        
+        </StackLayout>
+</ContentPage.Content>  
+</ContentPage>

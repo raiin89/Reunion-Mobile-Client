@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Reunion2020.View.EventDetailsPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame>
+                <StackLayout Padding="0"
+                             >
+                    <Image x:Name="EventImage" Aspect="AspectFill"
+                           
+                           ></Image>
+                    <Grid BindingContext="{Binding Event}">
+                        <Label Text="{Binding Name}"
+                               Grid.Row="0"
+                               Grid.Column="0"></Label>
+                        <Label Text="Arranagement name"
+                               Grid.Row="0"
+                               Grid.Column="1"></Label>
+                    </Grid>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

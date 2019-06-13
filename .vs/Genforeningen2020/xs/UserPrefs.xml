@@ -1,0 +1,37 @@
+﻿<Properties StartupConfiguration="{8958BCD0-DCB0-4D68-BFC2-6D194AD94CE9}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Reunion2020/Views/EventsPage.xaml.cs">
+    <Files>
+      <File FileName="Reunion2020/Views/EventsPage.xaml" />
+      <File FileName="Reunion2020/Views/EventsPage.xaml.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Genforeningen2020" expanded="True">
+            <Node name="Reunion2020" expanded="True">
+              <Node name="Assets" expanded="True">
+                <Node name="Images" expanded="True" />
+              </Node>
+              <Node name="Models" expanded="True" />
+              <Node name="Services" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="EventsPage.xaml" expanded="True">
+                  <Node name="EventsPage.xaml.cs" selected="True" />
+                </Node>
+                <Node name="MapPage.xaml" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Reunion2020.Android AndroidDesignerPreferredTheme="Theme.DeviceDefault.Light.NoActionBar.Fullscreen" PreferredExecutionTarget="Android.MWS0216418002049" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Reunion2020.iOS automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.21AE2702-56D2-48C6-A9D7-CD2BDC0D4DF8" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
